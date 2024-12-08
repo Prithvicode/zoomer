@@ -1,8 +1,16 @@
 "use client";
-import { useCall, VideoPreview } from "@stream-io/video-react-sdk";
+import {
+  DeviceSettings,
+  useCall,
+  VideoPreview,
+} from "@stream-io/video-react-sdk";
 import React, { useEffect, useState } from "react";
 
-const MeetingSetup = () => {
+const MeetingSetup = ({
+  setIsSetupComplete,
+}: {
+  setIsSetupComplete: (value: boolean) => void;
+}) => {
   const [isMicCamOn, setisMicCamOn] = useState(false);
   const call = useCall();
   if (!call) {
@@ -33,7 +41,17 @@ const MeetingSetup = () => {
           />
           Join with mic and camera off
         </label>
+        <DeviceSettings />
       </div>
+      <button
+        onClick={() => {
+          call.join();
+          //   Setup Done
+          setIsSetupComplete(true);
+        }}
+      >
+        Join Meeting
+      </button>
     </div>
   );
 };
