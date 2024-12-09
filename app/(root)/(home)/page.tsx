@@ -3,7 +3,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div>
+    <div className="size-full bg-bg-1 ">
       HOme
       <Meeting />
     </div>

@@ -27,21 +27,20 @@ const MeetingSetup = ({
   }, [isMicCamOn, call?.camera, call?.microphone]);
 
   return (
-    <div>
+    <div className="h-screen w-full bg-blue-500 flex flex-col items-center ">
       MeetingSetup:
       <VideoPreview />
       <div>
-        <label>
-          <input
-            type="checkbox"
-            checked={isMicCamOn}
-            onChange={(e) => {
-              setisMicCamOn(e.target.checked);
-            }}
-          />
-          Join with mic and camera off
-        </label>
-        <DeviceSettings />
+        <input
+          type="checkbox"
+          checked={isMicCamOn}
+          onChange={(e) => {
+            setisMicCamOn(e.target.checked);
+          }}
+        />
+        <label> Join with mic and camera off</label>
+
+        {/* <DeviceSettings /> */}
       </div>
       <button
         onClick={() => {

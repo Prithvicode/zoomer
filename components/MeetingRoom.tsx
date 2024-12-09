@@ -22,7 +22,7 @@ const MeetingRoom = () => {
   };
 
   return (
-    <div>
+    <div className="bg-blue-500 ">
       MeetingRoom:
       <div>
         <CallLayout />

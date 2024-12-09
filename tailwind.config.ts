@@ -10,8 +10,11 @@ export default {
   theme: {
     extend: {
       colors: {
+        bg: {
+          "1": "#ffffff",
+        },
         dark: {
-          1: "#1C1F2E",
+          "1": "#1C1F2E",
         },
       },
     },
