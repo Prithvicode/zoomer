@@ -4,8 +4,6 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "./ui/sheet";
@@ -20,6 +18,7 @@ const HamburgerNav = () => {
   return (
     <section className="w-full max-w-[200px] ">
       <Sheet>
+        {/* <SheetTitle>Menu</SheetTitle> */}
         <SheetTrigger asChild>
           <Image
             alt="hamrburgericon"

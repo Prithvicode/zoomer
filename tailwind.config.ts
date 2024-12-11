@@ -12,10 +12,14 @@ export default {
       colors: {
         bg: {
           "1": "#ffffff",
+          "2": "#6da8d5",
         },
         dark: {
           "1": "#1C1F2E",
         },
+      },
+      backgroundImage: {
+        heroImg: "url('/images/skycover.jpg')",
       },
     },
   },
