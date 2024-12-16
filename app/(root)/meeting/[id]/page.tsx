@@ -18,8 +18,7 @@ const MeetingPage = ({ params }: { params: Promise<{ id: string }> }) => {
 
   if (!isLoaded || isCallLoading) return <Loader />;
   return (
-    <main className="h-screen w-full flex bg-red-500 flex-col ">
-      Meeting
+    <main className="h-screen w-full flex flex-col ">
       <StreamCall call={call}>
         <StreamTheme>
           {isSetupComplete ? (

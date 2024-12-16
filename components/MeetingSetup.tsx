@@ -2,9 +2,12 @@
 import {
   DeviceSettings,
   useCall,
+  useCallStateHooks,
   VideoPreview,
 } from "@stream-io/video-react-sdk";
 import React, { useEffect, useState } from "react";
+import { Alert } from "./ui/alert";
+import { Button } from "./ui/button";
 
 const MeetingSetup = ({
   setIsSetupComplete,
@@ -12,6 +15,13 @@ const MeetingSetup = ({
   setIsSetupComplete: (value: boolean) => void;
 }) => {
   const [isMicCamOn, setisMicCamOn] = useState(false);
+
+  const { useCallEndedAt, useCallStartsAt } = useCallStateHooks();
+  const callStartsAt = useCallStartsAt();
+  const callEndedAt = useCallEndedAt();
+  const callTimeNotArrived =
+    callStartsAt && new Date(callStartsAt) > new Date();
+
   const call = useCall();
   if (!call) {
     throw new Error("Usecall must be within StreamCall Component meeting/[id]");
@@ -26,23 +36,31 @@ const MeetingSetup = ({
     }
   }, [isMicCamOn, call?.camera, call?.microphone]);
 
-  return (
-    <div className="h-screen w-full bg-blue-500 flex flex-col items-center ">
-      MeetingSetup:
-      <VideoPreview />
-      <div>
-        <input
-          type="checkbox"
-          checked={isMicCamOn}
-          onChange={(e) => {
-            setisMicCamOn(e.target.checked);
-          }}
-        />
-        <label> Join with mic and camera off</label>
+  if (callTimeNotArrived)
+    return (
+      <Alert
+        title={`Your Meeting has not started yet. It is scheduled for ${callStartsAt.toLocaleString()}`}
+      />
+    );
 
-        {/* <DeviceSettings /> */}
+  return (
+    <div className="h-screen w-full  flex flex-col items-center justify-center ">
+      <VideoPreview />
+      <div className="flex items-center gap-6 h-11 ">
+        <label className="flex gap-2">
+          <input
+            type="checkbox"
+            checked={isMicCamOn}
+            onChange={(e) => {
+              setisMicCamOn(e.target.checked);
+            }}
+          />
+          Join with mic and camera off
+        </label>
+
+        <DeviceSettings />
       </div>
-      <button
+      <Button
         onClick={() => {
           call.join();
           //   Setup Done
@@ -50,7 +68,7 @@ const MeetingSetup = ({
         }}
       >
         Join Meeting
-      </button>
+      </Button>
     </div>
   );
 };
