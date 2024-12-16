@@ -1,6 +1,6 @@
 import Meeting from "@/components/Meeting";
 import MeetingCard from "@/components/MeetingCard";
-import React from "react";
+import React, { useState } from "react";
 
 const Home = () => {
   const now = new Date();
@@ -38,9 +38,15 @@ const Home = () => {
 
       <Meeting />
       <div className="flex  gap-5">
-        <MeetingCard />
-        <MeetingCard />
-        <MeetingCard />
+        {/* <MeetingCard
+          title="Instant Meeting"
+          description="Start Meeting Now"
+          setMeetingType={() => setMeetingType("Instant Meeting")}
+          color="bg-blue-400"
+          icon="/Home.svg"
+        /> */}
+        {/* <MeetingCard />
+        <MeetingCard /> */}
       </div>
     </div>
   );
