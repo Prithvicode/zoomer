@@ -32,5 +32,83 @@ layer(video-default);
 .str-video__device-settings__device-kind .str-video__option,
 .str-video__device-settings__device-kind
   .str-video__device-settings__option:hover {
+  color: #ffffff;
+}
+.str-video__participant-details {
+  color: black;
+  background-color: white;
+}
+
+.str-video__menu-container {
+  color: black;
+  background-color: white;
+}
+
+.str-video__notification {
+  color: black;
+  background-color: white;
+}
+.str-video__call-controls__button {
+  height: 40px;
+  background-color: white;
+  color: black;
+}
+
+/* .str-video__call-controls > :nth-child(1) > :last-child { */
+/* background-color: #fafafa;
+} */
+.str-video__call-controls > :nth-child(5) {
+  /* Record Button */
+  display: none;
+}
+.str-video__composite-button__button-group {
+  background-color: white;
+}
+
+.str-video__composite-button__button-group
+  .str-video__call-controls__button.str-video__menu-toggle-button {
+  background-color: black;
+}
+
+.str-video__composite-button__button-group
+  .str-video__composite-button__button
+  .str-video__icon {
+  background-color: black;
+}
+
+.str-video__call-controls__button--variant-danger .str-video__icon {
+  background-color: black;
+}
+/* .str-video__icon .str-video__icon--caret-up {
+  background-color: black;
+} */
+.str-video__composite-button__button-group
+  .str-video__call-controls__button.str-video__menu-toggle-button {
+  background-color: white;
+}
+.str-video__composite-button__button-group:hover
+  .str-video__call-controls__button.str-video__menu-toggle-button {
+  background-color: #323b44;
+}
+.str-video__icon {
+  background-color: black;
+}
+
+.str-video__generic-menu .str-video__generic-menu--item button {
+  background-color: white;
+}
+
+.str-video__generic-menu .str-video__generic-menu--item button:hover {
   color: white;
+}
+
+.str-video__generic-menu
+  .str-video__generic-menu--item
+  button:hover
+  .str-video__icon {
+  background-color: white;
+}
+.str-video__participant-details__name {
+  color: black;
+  background-color: white;
 }
