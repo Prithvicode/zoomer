@@ -16,9 +16,9 @@ const MeetingSetup = ({
 }) => {
   const [isMicCamOn, setisMicCamOn] = useState(false);
 
-  const { useCallEndedAt, useCallStartsAt } = useCallStateHooks();
+  const { useCallStartsAt } = useCallStateHooks();
   const callStartsAt = useCallStartsAt();
-  const callEndedAt = useCallEndedAt();
+  // const callEndedAt = useCallEndedAt();
   const callTimeNotArrived =
     callStartsAt && new Date(callStartsAt) > new Date();
 

@@ -8,7 +8,7 @@ import {
   SpeakerLayout,
   useCallStateHooks,
 } from "@stream-io/video-react-sdk";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Loader from "./Loader";
 import {
   DropdownMenu,
@@ -18,7 +18,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { cn } from "@/lib/utils";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { Users, LayoutList } from "lucide-react";
 import EndCallButton from "./EndCallButton";
 

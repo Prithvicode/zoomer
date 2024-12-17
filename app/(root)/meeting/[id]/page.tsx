@@ -2,15 +2,15 @@
 
 import { use, useState } from "react";
 import { useUser } from "@clerk/nextjs";
-import { Icon, StreamCall, StreamTheme } from "@stream-io/video-react-sdk";
-import { useParams, useRouter } from "next/navigation";
+import { StreamCall, StreamTheme } from "@stream-io/video-react-sdk";
+
 import MeetingRoom from "@/components/MeetingRoom";
 import MeetingSetup from "@/components/MeetingSetup";
 import { useGetCallById } from "@/hooks/useGetCallById";
 import Loader from "@/components/Loader";
 
 const MeetingPage = ({ params }: { params: Promise<{ id: string }> }) => {
-  const { user, isLoaded } = useUser();
+  const { isLoaded } = useUser();
   const { id } = use(params);
   // Setup
   const [isSetupComplete, setIsSetupComplete] = useState(false);

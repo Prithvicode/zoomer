@@ -1,6 +1,6 @@
 import Meeting from "@/components/Meeting";
-import MeetingCard from "@/components/MeetingCard";
-import React, { useState } from "react";
+
+import React from "react";
 
 const Home = () => {
   const now = new Date();

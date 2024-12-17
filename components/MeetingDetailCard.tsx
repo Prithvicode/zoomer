@@ -34,6 +34,7 @@ const MeetingDetailCard = ({
       await navigator.clipboard.writeText(link);
       toast({ title: "Link Copied" });
     } catch (error) {
+      console.error("Error copying link:", error);
       toast({
         title: "Failed to copy the link",
         description: "Please try again.",

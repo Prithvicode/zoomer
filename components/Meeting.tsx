@@ -146,8 +146,8 @@ const Meeting = () => {
             navigator.clipboard.writeText(meetingLink);
             toast({ title: "Link Copied" });
           }}
-          image={"/icons/checked.svg"}
-          buttonIcon="/icons/copy.svg"
+          image={"/checked.svg"}
+          buttonIcon="/copy.svg"
           className="text-center"
           buttonText="Copy Meeting Link"
         />
