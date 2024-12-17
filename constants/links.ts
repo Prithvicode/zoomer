@@ -15,3 +15,11 @@ export const sideBarLinks = [
     route: "/previous",
   },
 ];
+
+export const avatarImages = [
+  "/images/avatar-1.jpeg",
+  "/images/avatar-1.jpeg",
+  "/images/avatar-1.jpeg",
+  "/images/avatar-1.jpeg",
+  "/images/avatar-1.jpeg",
+];

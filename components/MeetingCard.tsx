@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
-interface MeetingCardProps {
+interface MeetingCard {
   title: string;
   description: string;
   icon: string;
@@ -14,7 +14,7 @@ const MeetingCard = ({
   icon,
   setMeetingType,
   color,
-}: MeetingCardProps) => {
+}: MeetingCard) => {
   return (
     <div
       className={cn(
