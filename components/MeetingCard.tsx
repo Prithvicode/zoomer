@@ -18,15 +18,15 @@ const MeetingCard = ({
   return (
     <div
       className={cn(
-        "w-[250px] h-[250px] flex flex-col rounded-2xl items-center justify-center p-8 gap-5 cursor-pointer",
+        "w-[250px] h-[220px] flex flex-col rounded-2xl items-center justify-between p-5 gap-5 cursor-pointer hover:opacity-80 ",
         color
       )}
       onClick={setMeetingType}
     >
-      <div className="flex items-center p-6 bg-white/20 border-2  justify-center rounded-2xl">
-        <Image src={icon} alt="instant" height={36} width={36} className="" />
+      <div className="flex items-center flex-start w-full ">
+        <Image src={icon} alt="instant" height={81} width={81} className=" " />
       </div>
-      <div className="text-center">
+      <div className="w-full">
         <p className="text-2xl font-bold ">{title}</p>
         <p className="text-md font-semibold ">{description}</p>
       </div>

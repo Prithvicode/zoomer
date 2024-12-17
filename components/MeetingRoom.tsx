@@ -20,6 +20,7 @@ import {
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { Users, LayoutList } from "lucide-react";
+import EndCallButton from "./EndCallButton";
 type CallLayoutType = "grid" | "speaker-left" | "speaker-right";
 
 const MeetingRoom = () => {
@@ -86,7 +87,7 @@ const MeetingRoom = () => {
             <Users size={20} className="" />
           </div>
         </button>
-        {/* {!isPersonalRoom && <EndCallButton />} */}
+        <EndCallButton />
       </div>
     </section>
   );

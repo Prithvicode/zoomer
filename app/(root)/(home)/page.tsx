@@ -13,8 +13,8 @@ const Home = () => {
   );
 
   return (
-    <div className="relative bg-bg-1 w-full  h-[300px] rounded-lg ">
-      <div className="bg-heroImg  w-full h-[300px] bg-cover rounded-lg -z-10 text-slate-950 text-xl font-bold p-6 flex justify-between ">
+    <div className="relative bg-bg-1 w-fit  h-[400px] rounded-lg ml-[300px] max-lg:ml-[150px]">
+      <div className="bg-bg-3 w-full h-[400px] rounded-lg -z-10 text-slate-950 text-xl font-bold p-8 flex justify-between ">
         <div className="absolute inset-0 size-full bg-white/40 rounded-lg -z-1"></div>
         <div className="relative z-10 flex flex-col gap-3  h-full justify-around px-9 ">
           <h2 className="bg-bg-1/30 p-2 pr-7 rounded-lg w-fit text-blue-700">

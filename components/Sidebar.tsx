@@ -10,21 +10,33 @@ import React from "react";
 const Sidebar = () => {
   const path = usePathname();
   return (
-    <section className="sticky left-0 top-0 h-screen p-6 sm:px-5  flex flex-col items-center max-sm:hidden md:w-[300px] pt-20 bg-bg-1">
+    <section className="fixed z-40 left-0 top-0 h-screen p-6 sm:px-5  flex flex-col items-center max-sm:hidden lg:w-[300px] min-w-[150px] pt-20 bg-bg-1 ">
       <div className="flex flex-col  gap-6 w-full">
         {sideBarLinks.map((link, idx) => {
           const isActive =
             path === link.route || path.startsWith(`${link.route}/`);
           return (
             <Link
+              prefetch={true}
               href={link.route}
               key={idx}
-              className={cn("flex gap-4 p-4 rounded-lg items-center", {
-                "bg-blue-400": isActive,
-              })}
+              className={cn(
+                "flex gap-4 px-4 py-2 mt-3 shadow-md rounded-lg items-center max-lg:justify-center max-md:px-2",
+                {
+                  "bg-bg-3": isActive,
+                }
+              )}
             >
-              <Image src={link.image} width={24} height={24} alt={link.label} />
-              <p className="text-lg font-semibold">{link.label}</p>
+              <Image
+                loading="eager"
+                src={link.image}
+                width={40}
+                height={40}
+                alt={link.label}
+                placeholder="empty"
+                className=" "
+              />
+              <p className="text-lg font-bold max-lg:hidden">{link.label}</p>
             </Link>
           );
         })}

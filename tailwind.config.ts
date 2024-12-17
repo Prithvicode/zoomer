@@ -13,6 +13,12 @@ export default {
         bg: {
           "1": "#ffffff",
           "2": "#6da8d5",
+          "3": "#A0D3F3",
+        },
+        card: {
+          "1": "#5D8DED",
+          "2": "#DCA54C",
+          "3": "#9FEA61",
         },
         dark: {
           "1": "#1C1F2E",

@@ -73,29 +73,29 @@ const Meeting = () => {
 
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetail?.id}`;
   return (
-    <section className="grid grid-cols-1 gap-11 md:grid-cols-2 xl:grid-cols-4">
+    <section className="grid grid-cols-1 gap-14 md:grid-cols-2 xl:grid-cols-4  py-10 px-10">
       {/* Meeting:
       <button onClick={createMeeting}>Create Meeting</button> */}
       <MeetingCard
         title="Instant Meeting"
         description="Start Meeting Now"
         setMeetingType={() => setMeetingType("isInstantMeeting")}
-        color="bg-blue-400"
-        icon="/Home.svg"
+        color="bg-card-1"
+        icon="/icons8-add-48.svg"
       />
       <MeetingCard
         title="Join Meeting"
         description="via Link"
         setMeetingType={() => setMeetingType("isJoiningMeeting")}
-        color="bg-blue-400"
-        icon="/Home.svg"
+        color="bg-card-2"
+        icon="/icons8-link-48.svg"
       />
       <MeetingCard
         title="Schedule Meeting"
         description="Plan meeting"
         setMeetingType={() => setMeetingType("isScheduleMeeting")}
-        color="bg-blue-400"
-        icon="/Home.svg"
+        color="bg-card-3"
+        icon="/icons8-schedule-48.svg"
       />
 
       {!callDetail ? (
