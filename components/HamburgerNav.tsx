@@ -8,10 +8,11 @@ import {
   SheetTrigger,
 } from "./ui/sheet";
 import Image from "next/image";
-import { sideBarLinks } from "@/constants/links";
+
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import { sideBarLinks } from "@/constants/links";
 
 const HamburgerNav = () => {
   const path = usePathname();
@@ -30,11 +31,16 @@ const HamburgerNav = () => {
         </SheetTrigger>
         <SheetContent side="left" className="border-none bg-bg-1">
           {/* Logo Link */}
-
-          <Link href={"/"} className="p-4 p">
-            Zoomer
+          <Link prefetch={true} href="/" className="flex items-center gap-1 ">
+            <Image
+              loading="eager"
+              src={"/icons8-camera-48.svg"}
+              alt="zoomer-logo"
+              height={48}
+              width={48}
+            />
+            <h1 className="text-2xl font-bold">Zoomer</h1>
           </Link>
-
           <section className="flex flex-col gap-3 mt-4">
             {sideBarLinks.map((link, idx) => {
               const isActive =
@@ -50,11 +56,11 @@ const HamburgerNav = () => {
                   >
                     <Image
                       src={link.image}
-                      width={20}
-                      height={20}
+                      width={48}
+                      height={48}
                       alt={link.label}
                     />
-                    <p className="font-semibold">{link.label}</p>
+                    <p className="font-bold text-lg">{link.label}</p>
                   </Link>
                 </SheetClose>
               );

@@ -21,7 +21,7 @@ const Sidebar = () => {
               href={link.route}
               key={idx}
               className={cn(
-                "flex gap-4 px-4 py-2 mt-3 shadow-md rounded-lg items-center max-lg:justify-center max-md:px-2",
+                "flex gap-4 px-4 py-2 mt-3 shadow-md rounded-lg items-center  max-lg:justify-center max-md:px-2",
                 {
                   "bg-bg-3": isActive,
                 }

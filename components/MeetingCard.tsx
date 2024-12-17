@@ -18,7 +18,7 @@ const MeetingCard = ({
   return (
     <div
       className={cn(
-        "w-[250px] h-[220px] flex flex-col rounded-2xl items-center justify-between p-5 gap-5 cursor-pointer hover:opacity-80 ",
+        "xl:w-[350px] max-xl:[220px] h-[220px] flex flex-col rounded-2xl items-center justify-between p-5 gap-5 cursor-pointer hover:opacity-80  max-md:w-full",
         color
       )}
       onClick={setMeetingType}

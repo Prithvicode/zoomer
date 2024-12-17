@@ -73,7 +73,7 @@ const Meeting = () => {
 
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetail?.id}`;
   return (
-    <section className="grid grid-cols-1 gap-14 md:grid-cols-2 xl:grid-cols-4  py-10 px-10">
+    <section className="grid grid-cols-1  gap-10  md:grid-cols-2 xl:grid-cols-3 py-10 px-5 ">
       {/* Meeting:
       <button onClick={createMeeting}>Create Meeting</button> */}
       <MeetingCard
