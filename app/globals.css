@@ -1,6 +1,4 @@
-@import url("@stream-io/video-react-sdk/dist/css/styles.css")
-layer(video-default);
-
+@import url("@stream-io/video-react-sdk/dist/css/styles.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -90,6 +88,11 @@ layer(video-default);
   .str-video__call-controls__button.str-video__menu-toggle-button {
   background-color: #323b44;
 }
+.str-video__composite-button__button-group--active:hover
+  .str-video__call-controls__button.str-video__menu-toggle-button {
+  background-color: #e47474;
+}
+
 .str-video__icon {
   background-color: black;
 }
@@ -111,4 +114,50 @@ layer(video-default);
 .str-video__participant-details__name {
   color: black;
   background-color: white;
+}
+
+.str-video__composite-button__button-group.str-video__composite-button__button-group--active
+  .str-video__icon {
+  background: black;
+}
+
+.str-video__composite-button__button-group--active
+  .str-video__call-controls__button.str-video__menu-toggle-button {
+  background-color: #dc433b;
+}
+
+.str-video__search-input__container {
+  border: 1px solid black;
+  background: white;
+  color: black;
+}
+
+.str-video__participant-listing-item
+  .str-video__participant-listing-item__media-indicator-group
+  .str-video__participant-listing-item__icon-camera {
+  background-color: black;
+}
+
+.str-video__participant-listing-item
+  .str-video__participant-listing-item__media-indicator-group
+  .str-video__participant-listing-item__icon-mic {
+  background-color: black;
+}
+
+.str-video__participant-view
+  .str-video__participant-details
+  .str-video__participant-details__name
+  .str-video__participant-details__name--audio-muted {
+  background-color: black;
+}
+
+.str-video__participant-view
+  .str-video__participant-details
+  .str-video__participant-details__name
+  .str-video__participant-details__name--video-muted {
+  background-color: black;
+}
+
+.str-video__notification .str-video__notification__icon {
+  background-color: black;
 }
